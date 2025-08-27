@@ -3,11 +3,16 @@ phases:
   install:
     commands:
       - echo "Installing dependencies"
-      - npm install
+      - sudo apt-get update
+      - sudo apt-get install nginx -y
   build:
     commands:
       - echo "Building application"
-      - npm run build
+      - cp index.html /var/www/html/
+  post_build:
+    commands:
+      - echo "configuring ngnix"
 artifacts:
   files:
     - '**/*'
+
