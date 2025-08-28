@@ -2,18 +2,18 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo "Installing NGINX"
-      - sudo apt-get update
-      - sudo apt-get install nginx -y
+      - echo "Installing dependencies"
+      - npm install
   build:
     commands:
       - echo "Building application"
       - cp index.html /var/www/html/
   post_build:
     commands:
-      - echo "configuring ngnix"
+      - echo "configuring the application"
 artifacts:
   files:
     - '**/*'
+
 
 
