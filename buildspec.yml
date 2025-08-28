@@ -2,7 +2,7 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo "Installing dependencies"
+      - echo "Installing NGINX"
       - sudo apt-get update
       - sudo apt-get install nginx -y
   build:
@@ -15,4 +15,5 @@ phases:
 artifacts:
   files:
     - '**/*'
+
 
