@@ -1,14 +1,14 @@
-version: 0.0
+version: 0.1
 os: linux
 files:
   - source: index.html
     destination: /var/www/html/
 hooks:
   BeforeInstall:
-    - location: scripts/install_httpd.sh
+    - location: install_httpd.sh
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: scripts/restart_httpd.sh
+    - location: restart_httpd.sh
       timeout: 300
       runas: root
