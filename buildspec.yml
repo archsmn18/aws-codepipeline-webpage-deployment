@@ -1,4 +1,4 @@
-version: 0.2
+version: 0.0
 
 phases:
   build:
@@ -9,3 +9,4 @@ phases:
 artifacts:
   files:
     - 'output/**/*'
+
